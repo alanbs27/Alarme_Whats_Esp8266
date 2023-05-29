@@ -21,8 +21,8 @@ void WhatsAppMessages(String message);                                  // Funç
 // Dados do celular e chave do whatsapp
 
 bool flag = 0;                                                          // Flag para uso na logica do sensor
-String phoneNumber = "+5521971103480";                                  // Meu número de celular com formato internacional
-String apiKey = "7633384";                                               // A chave que o bot do whatsapp enviou
+String phoneNumber = "SEU NUMERO DE TELEFONE";                                  // Meu número de celular com formato internacional
+String apiKey = "SUA APIKEY";                                               // A chave que o bot do whatsapp enviou
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -72,7 +72,7 @@ void loop()
 void WhatsAppMessages(String message)
 {
     // Dados a serem enviados pelo método Post suportado pelo protocolo HTTP
-    String url = "http://api.callmebot.com/whatsapp.php?phone=" + phoneNumber + "&apikey=" + apiKey + "&text=" + urlEncode(message);    
+    String url = "https://api.callmebot.com/whatsapp.php?phone=" + phoneNumber + "&apikey=" + apiKey + "&text=" + urlEncode(message);    
     WiFiClient client;
     HTTPClient https;                                                            // Cria um objeto HTTP
     https.begin(client, url);                                                            // Inicia o objeto HTTP passando a string acima
